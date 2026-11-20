@@ -92,11 +92,23 @@ public sealed class MainWindow : Window
             TextWrapping = TextWrapping.Wrap,
             Margin = new Thickness(16, 0)
         };
-        _retour = new Button { Content = "Retour", MinWidth = 120 };
+        _retour = new Button
+        {
+            Content = "Retour",
+            MinWidth = 120,
+            HorizontalContentAlignment = HorizontalAlignment.Center,
+            VerticalContentAlignment = VerticalAlignment.Center
+        };
         _retour.Classes.Add("secondary");
         _retour.Click += (_, _) => Navigateur.Courant.Retour();
 
-        var accueil = new Button { Content = "Accueil", MinWidth = 120 };
+        var accueil = new Button
+        {
+            Content = "Accueil",
+            MinWidth = 120,
+            HorizontalContentAlignment = HorizontalAlignment.Center,
+            VerticalContentAlignment = VerticalAlignment.Center
+        };
         accueil.Classes.Add("secondary");
         accueil.Click += (_, _) => Navigateur.Courant.Accueil();
 
