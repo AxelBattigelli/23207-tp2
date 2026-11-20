@@ -129,6 +129,8 @@ public sealed class MainWindow : Window
 
     public void Afficher(EcranPrototype ecran, bool peutRevenir)
     {
+        if (_hote.Content is ScrollViewer ancienScroll)
+            ancienScroll.Content = null;
         _titre.Text = ecran.Titre;
         _fil.Text = ecran.Fil;
         _indice.Text = ecran.Indice;
